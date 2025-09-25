@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/connector_widget.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:smart_typeahead/src/common/base/connector_widget.dart';
+import 'package:smart_typeahead/src/common/base/suggestions_controller.dart';
 
-import 'package:flutter_typeahead/src/common/base/types.dart';
-import 'package:flutter_typeahead/src/common/search/suggestions_search_text_debouncer.dart';
-import 'package:flutter_typeahead/src/common/search/suggestions_search_typing_connector.dart';
+import 'package:smart_typeahead/src/common/base/types.dart';
+import 'package:smart_typeahead/src/common/search/suggestions_search_text_debouncer.dart';
+import 'package:smart_typeahead/src/common/search/suggestions_search_typing_connector.dart';
 
 /// A widget that loads suggestions based on the text entered in a text field.
 class SuggestionsSearch<T> extends StatefulWidget {
@@ -17,17 +17,17 @@ class SuggestionsSearch<T> extends StatefulWidget {
     this.debounceDuration,
   });
 
-  /// {@macro flutter_typeahead.SuggestionsBox.controller}
+  /// {@macro smart_typeahead.SuggestionsBox.controller}
   final SuggestionsController<T> controller;
 
-  /// {@template flutter_typeahead.SuggestionsSearch.textEditingController}
+  /// {@template smart_typeahead.SuggestionsSearch.textEditingController}
   /// Controller for the text field used for input.
   ///
   /// The value will be used to get suggestions.
   /// {@endtemplate}
   final TextEditingController textEditingController;
 
-  /// {@template flutter_typeahead.SuggestionsSearch.suggestionsCallback}
+  /// {@template smart_typeahead.SuggestionsSearch.suggestionsCallback}
   /// Called with the search pattern to get matching suggestions.
   ///
   /// Example:
@@ -47,7 +47,7 @@ class SuggestionsSearch<T> extends StatefulWidget {
   /// The widget below this widget in the tree.
   final Widget child;
 
-  /// {@template flutter_typeahead.SuggestionsSearch.debounce}
+  /// {@template smart_typeahead.SuggestionsSearch.debounce}
   /// Duration to wait for changes in the text field before updating suggestions.
   ///
   /// This prevents making unnecessary calls to [suggestionsCallback] while the

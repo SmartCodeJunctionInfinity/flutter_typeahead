@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
+import 'package:smart_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:smart_typeahead/src/common/base/types.dart';
 
 /// A widget that shows a list of suggestions based on user input.
 class SuggestionsList<T> extends StatefulWidget {
@@ -20,10 +20,10 @@ class SuggestionsList<T> extends StatefulWidget {
     this.itemSeparatorBuilder,
   });
 
-  /// {@macro flutter_typeahead.SuggestionsBox.controller}
+  /// {@macro smart_typeahead.SuggestionsBox.controller}
   final SuggestionsController<T> controller;
 
-  /// {@template flutter_typeahead.SuggestionsList.retainOnLoading}
+  /// {@template smart_typeahead.SuggestionsList.retainOnLoading}
   /// Whether to retain the previous suggestions while loading new suggestions.
   ///
   /// If enabled, [loadingBuilder] will be ignored.
@@ -32,7 +32,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool? retainOnLoading;
 
-  /// {@template flutter_typeahead.SuggestionsList.hideKeyboardOnDrag}
+  /// {@template smart_typeahead.SuggestionsList.hideKeyboardOnDrag}
   /// Whether the keyboard should be hidden when the user scrolls the suggestions list.
   ///
   /// Cannot be used together with [hideWithKeyboard].
@@ -41,7 +41,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool? hideKeyboardOnDrag;
 
-  /// {@template flutter_typeahead.SuggestionsList.hideOnLoading}
+  /// {@template smart_typeahead.SuggestionsList.hideOnLoading}
   /// Whether the suggestions box should be hidden during loading.
   ///
   /// If enabled, [loadingBuilder] will be ignored.
@@ -50,7 +50,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool? hideOnLoading;
 
-  /// {@template flutter_typeahead.SuggestionsList.hideOnError}
+  /// {@template smart_typeahead.SuggestionsList.hideOnError}
   /// Whether the suggestions box should be hidden on error.
   ///
   /// If enabled, [errorBuilder] will be ignored.
@@ -59,7 +59,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool? hideOnError;
 
-  /// {@template flutter_typeahead.SuggestionsList.hideOnEmpty}
+  /// {@template smart_typeahead.SuggestionsList.hideOnEmpty}
   /// Whether the suggestions box should be hidden when no suggestions are available.
   ///
   /// If enabled, [noItemsFoundBuilder] will be ignored.
@@ -68,7 +68,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool? hideOnEmpty;
 
-  /// {@template flutter_typeahead.SuggestionsList.loadingBuilder}
+  /// {@template smart_typeahead.SuggestionsList.loadingBuilder}
   /// Builder function to display a loading indicator.
   ///
   /// Called when waiting for [suggestionsCallback] to return.
@@ -83,7 +83,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final WidgetBuilder loadingBuilder;
 
-  /// {@template flutter_typeahead.SuggestionsList.errorBuilder}
+  /// {@template smart_typeahead.SuggestionsList.errorBuilder}
   /// Builds the widget for when the controller has an error.
   ///
   /// Example usage:
@@ -99,7 +99,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final SuggestionsErrorBuilder errorBuilder;
 
-  /// {@template flutter_typeahead.SuggestionsList.emptyBuilder}
+  /// {@template smart_typeahead.SuggestionsList.emptyBuilder}
   /// Builds the widget for when the suggestions list is empty.
   ///
   /// Example usage:
@@ -109,7 +109,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final WidgetBuilder emptyBuilder;
 
-  /// {@template flutter_typeahead.SuggestionsListConfig.itemBuilder}
+  /// {@template smart_typeahead.SuggestionsListConfig.itemBuilder}
   /// Called for each suggestion to build the corresponding widget.
   ///
   /// Example usage:
@@ -124,7 +124,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final SuggestionsItemBuilder<T> itemBuilder;
 
-  /// {@template flutter_typeahead.SuggestionsList.itemSeparatorBuilder}
+  /// {@template smart_typeahead.SuggestionsList.itemSeparatorBuilder}
   /// Optional builder function to add separators between suggestions.
   ///
   /// Example usage:
@@ -137,7 +137,7 @@ class SuggestionsList<T> extends StatefulWidget {
   /// {@endtemplate}
   final IndexedWidgetBuilder? itemSeparatorBuilder;
 
-  /// {@template flutter_typeahead.SuggestionsList.listBuilder}
+  /// {@template smart_typeahead.SuggestionsList.listBuilder}
   /// Optional builder function to customize the suggestions list.
   ///
   /// Example usage:

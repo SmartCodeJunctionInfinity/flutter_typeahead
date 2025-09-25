@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
-import 'package:flutter_typeahead/src/common/box/suggestions_box_animation.dart';
-import 'package:flutter_typeahead/src/common/box/suggestions_box_focus_connector.dart';
-import 'package:flutter_typeahead/src/common/box/suggestions_box_scroll_injector.dart';
+import 'package:smart_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:smart_typeahead/src/common/base/types.dart';
+import 'package:smart_typeahead/src/common/box/suggestions_box_animation.dart';
+import 'package:smart_typeahead/src/common/box/suggestions_box_focus_connector.dart';
+import 'package:smart_typeahead/src/common/box/suggestions_box_scroll_injector.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
 /// A widget that contains suggestions based on user input.
@@ -20,7 +20,7 @@ class SuggestionsBox<T> extends StatelessWidget {
     this.animationDuration,
   });
 
-  /// {@template flutter_typeahead.SuggestionsBox.controller}
+  /// {@template smart_typeahead.SuggestionsBox.controller}
   /// Controller to manage the state of the suggestions box.
   ///
   /// This can be used to programmatically open and close the suggestions box
@@ -28,7 +28,7 @@ class SuggestionsBox<T> extends StatelessWidget {
   /// {@endtemplate}
   final SuggestionsController<T> controller;
 
-  /// {@template flutter_typeahead.SuggestionsBox.scrollController}
+  /// {@template smart_typeahead.SuggestionsBox.scrollController}
   /// Controller for the [ScrollView] containing the suggestions.
   ///
   /// You may access the controller via [PrimaryScrollController.of]
@@ -36,14 +36,14 @@ class SuggestionsBox<T> extends StatelessWidget {
   /// {@endtemplate}
   final ScrollController? scrollController;
 
-  /// {@template flutter_typeahead.SuggestionsBox.builder}
+  /// {@template smart_typeahead.SuggestionsBox.builder}
   /// Builds the content of the suggestions box.
   ///
   /// This is typically a [SuggestionsList] widget.
   /// {@endtemplate}
   final WidgetBuilder builder;
 
-  /// {@template flutter_typeahead.SuggestionsBox.decorationBuilder}
+  /// {@template smart_typeahead.SuggestionsBox.decorationBuilder}
   /// Builder function for decorating the suggestions box.
   ///
   /// Example usage:
@@ -63,7 +63,7 @@ class SuggestionsBox<T> extends StatelessWidget {
   /// {@endtemplate}
   final DecorationBuilder? decorationBuilder;
 
-  /// {@template flutter_typeahead.SuggestionsBox.transitionBuilder}
+  /// {@template smart_typeahead.SuggestionsBox.transitionBuilder}
   /// Builder function for animating the suggestions box.
   ///
   /// Example usage:
@@ -88,7 +88,7 @@ class SuggestionsBox<T> extends StatelessWidget {
   /// {@endtemplate}
   final AnimationTransitionBuilder? transitionBuilder;
 
-  /// {@template flutter_typeahead.SuggestionsBox.animationDuration}
+  /// {@template smart_typeahead.SuggestionsBox.animationDuration}
   /// Duration of the animation for showing and hiding the suggestions box.
   ///
   /// Defaults to `500 milliseconds`.

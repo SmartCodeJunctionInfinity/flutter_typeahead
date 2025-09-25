@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field.dart';
-import 'package:flutter_typeahead/src/common/search/suggestions_search.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/box/suggestions_list.dart';
+import 'package:smart_typeahead/src/common/field/suggestions_field.dart';
+import 'package:smart_typeahead/src/common/search/suggestions_search.dart';
+import 'package:smart_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:smart_typeahead/src/common/box/suggestions_list.dart';
 
-import 'package:flutter_typeahead/src/common/base/types.dart';
+import 'package:smart_typeahead/src/common/base/types.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
-/// {@template flutter_typeahead.RawTypeAheadField}
+/// {@template smart_typeahead.RawTypeAheadField}
 /// A widget that shows suggestions above a text field while the user is typing.
 ///
 /// This is the base class for the Material and Cupertino versions of the widget.
@@ -53,97 +53,97 @@ abstract class RawTypeAheadField<T> extends StatefulWidget {
   /// Builds the text field that will be used to search for the suggestions.
   final TextFieldBuilder builder;
 
-  /// {@macro flutter_typeahead.SuggestionsSearch.textEditingController}
+  /// {@macro smart_typeahead.SuggestionsSearch.textEditingController}
   final TextEditingController? controller;
 
-  /// {@macro flutter_typeahead.SuggestionsField.focusNode}
+  /// {@macro smart_typeahead.SuggestionsField.focusNode}
   final FocusNode? focusNode;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.controller}
+  /// {@macro smart_typeahead.SuggestionsBox.controller}
   final SuggestionsController<T>? suggestionsController;
 
-  /// {@macro flutter_typeahead.SuggestionsField.onSelected}
+  /// {@macro smart_typeahead.SuggestionsField.onSelected}
   final ValueSetter<T>? onSelected;
 
-  /// {@macro flutter_typeahead.SuggestionsField.direction}
+  /// {@macro smart_typeahead.SuggestionsField.direction}
   final VerticalDirection? direction;
 
-  /// {@macro flutter_typeahead.SuggestionsField.constraints}
+  /// {@macro smart_typeahead.SuggestionsField.constraints}
   final BoxConstraints? constraints;
 
-  /// {@macro flutter_typeahead.SuggestionsField.constrainWidth}
+  /// {@macro smart_typeahead.SuggestionsField.constrainWidth}
   final bool constrainWidth;
 
-  /// {@macro flutter_typeahead.SuggestionsField.offset}
+  /// {@macro smart_typeahead.SuggestionsField.offset}
   final Offset? offset;
 
-  /// {@macro flutter_typeahead.SuggestionsField.autoFlipDirection}
+  /// {@macro smart_typeahead.SuggestionsField.autoFlipDirection}
   final bool autoFlipDirection;
 
-  /// {@macro flutter_typeahead.SuggestionsField.autoFlipMinHeight}
+  /// {@macro smart_typeahead.SuggestionsField.autoFlipMinHeight}
   final double autoFlipMinHeight;
 
-  /// {@macro flutter_typeahead.SuggestionsField.showOnFocus}
+  /// {@macro smart_typeahead.SuggestionsField.showOnFocus}
   final bool showOnFocus;
 
-  /// {@macro flutter_typeahead.SuggestionsField.hideOnUnfocus}
+  /// {@macro smart_typeahead.SuggestionsField.hideOnUnfocus}
   final bool hideOnUnfocus;
 
-  /// {@macro flutter_typeahead.SuggestionsField.hideOnSelect}
+  /// {@macro smart_typeahead.SuggestionsField.hideOnSelect}
   final bool hideOnSelect;
 
-  /// {@macro flutter_typeahead.SuggestionsField.hideWithKeyboard}
+  /// {@macro smart_typeahead.SuggestionsField.hideWithKeyboard}
   final bool hideWithKeyboard;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.scrollController}
+  /// {@macro smart_typeahead.SuggestionsBox.scrollController}
   final ScrollController? scrollController;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.transitionBuilder}
+  /// {@macro smart_typeahead.SuggestionsBox.transitionBuilder}
   final AnimationTransitionBuilder? transitionBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.animationDuration}
+  /// {@macro smart_typeahead.SuggestionsBox.animationDuration}
   final Duration? animationDuration;
 
-  /// {@macro flutter_typeahead.SuggestionsSearch.suggestionsCallback}
+  /// {@macro smart_typeahead.SuggestionsSearch.suggestionsCallback}
   final SuggestionsCallback<T> suggestionsCallback;
 
-  /// {@macro flutter_typeahead.SuggestionsList.retainOnLoading}
+  /// {@macro smart_typeahead.SuggestionsList.retainOnLoading}
   final bool? retainOnLoading;
 
-  /// {@macro flutter_typeahead.SuggestionsList.hideKeyboardOnDrag}
+  /// {@macro smart_typeahead.SuggestionsList.hideKeyboardOnDrag}
   final bool? hideKeyboardOnDrag;
 
-  /// {@macro flutter_typeahead.SuggestionsList.hideOnLoading}
+  /// {@macro smart_typeahead.SuggestionsList.hideOnLoading}
   final bool? hideOnLoading;
 
-  /// {@macro flutter_typeahead.SuggestionsList.hideOnError}
+  /// {@macro smart_typeahead.SuggestionsList.hideOnError}
   final bool? hideOnError;
 
-  /// {@macro flutter_typeahead.SuggestionsList.hideOnEmpty}
+  /// {@macro smart_typeahead.SuggestionsList.hideOnEmpty}
   final bool? hideOnEmpty;
 
-  /// {@macro flutter_typeahead.SuggestionsList.loadingBuilder}
+  /// {@macro smart_typeahead.SuggestionsList.loadingBuilder}
   final WidgetBuilder loadingBuilder;
 
-  //// {@macro flutter_typeahead.SuggestionsList.errorBuilder}
+  //// {@macro smart_typeahead.SuggestionsList.errorBuilder}
   final SuggestionsErrorBuilder errorBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsList.emptyBuilder}
+  /// {@macro smart_typeahead.SuggestionsList.emptyBuilder}
   final WidgetBuilder emptyBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsListConfig.itemBuilder}
+  /// {@macro smart_typeahead.SuggestionsListConfig.itemBuilder}
   final SuggestionsItemBuilder<T> itemBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsList.itemSeparatorBuilder}
+  /// {@macro smart_typeahead.SuggestionsList.itemSeparatorBuilder}
   final IndexedWidgetBuilder? itemSeparatorBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.decorationBuilder}
+  /// {@macro smart_typeahead.SuggestionsBox.decorationBuilder}
   final DecorationBuilder? decorationBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsList.listBuilder}
+  /// {@macro smart_typeahead.SuggestionsList.listBuilder}
   final ListBuilder? listBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsSearch.debounce}
+  /// {@macro smart_typeahead.SuggestionsSearch.debounce}
   final Duration? debounceDuration;
 
   @override
@@ -193,7 +193,6 @@ class _RawTypeAheadFieldState<T> extends State<RawTypeAheadField<T>> {
   Widget build(BuildContext context) {
     return SuggestionsField<T>(
       controller: widget.suggestionsController,
-      onSelected: widget.onSelected,
       focusNode: focusNode,
       direction: widget.direction,
       autoFlipDirection: widget.autoFlipDirection,

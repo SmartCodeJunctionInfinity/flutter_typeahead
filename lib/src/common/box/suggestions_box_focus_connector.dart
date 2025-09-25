@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/connector_widget.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:smart_typeahead/src/common/base/connector_widget.dart';
+import 'package:smart_typeahead/src/common/base/suggestions_controller.dart';
 
 /// Connects the focus of the suggestions box to the controller state.
 class SuggestionsBoxFocusConnector<T> extends StatefulWidget {

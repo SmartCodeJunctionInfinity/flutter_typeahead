@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:smart_typeahead/src/common/base/suggestions_controller.dart';
 
 /// A widget that helps reopening the suggestions list when the user taps it.
 ///

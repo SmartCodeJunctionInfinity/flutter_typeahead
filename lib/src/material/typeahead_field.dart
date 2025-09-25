@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_typeahead/src/common/field/typeahead_field.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
-import 'package:flutter_typeahead/src/material/material_defaults.dart';
+import 'package:smart_typeahead/src/common/field/typeahead_field.dart';
+import 'package:smart_typeahead/src/common/base/types.dart';
+import 'package:smart_typeahead/src/material/material_defaults.dart';
 
-/// {@template flutter_typeahead.TypeAheadField}
+/// {@template smart_typeahead.TypeAheadField}
 /// A widget that shows suggestions above a text field while the user is typing.
 ///
 /// This is the Material Design version of the widget.
@@ -42,7 +42,6 @@ class TypeAheadField<T> extends RawTypeAheadField<T> {
     DecorationBuilder? decorationBuilder,
     super.listBuilder,
     super.constraints,
-    super.constrainWidth,
     super.offset,
   }) : super(
           builder: builder ?? TypeAheadMaterialDefaults.builder,

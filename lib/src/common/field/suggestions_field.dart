@@ -1,15 +1,15 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/connector_widget.dart';
-import 'package:flutter_typeahead/src/common/base/floater.dart';
-import 'package:flutter_typeahead/src/common/box/suggestions_box.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_focus_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_highlight_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_keyboard_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_box_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_select_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_tap_connector.dart';
+import 'package:smart_typeahead/src/common/base/connector_widget.dart';
+import 'package:smart_typeahead/src/common/base/floater.dart';
+import 'package:smart_typeahead/src/common/box/suggestions_box.dart';
+import 'package:smart_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:smart_typeahead/src/common/base/types.dart';
+import 'package:smart_typeahead/src/common/field/suggestions_field_focus_connector.dart';
+import 'package:smart_typeahead/src/common/field/suggestions_field_highlight_connector.dart';
+import 'package:smart_typeahead/src/common/field/suggestions_field_keyboard_connector.dart';
+import 'package:smart_typeahead/src/common/field/suggestions_field_box_connector.dart';
+import 'package:smart_typeahead/src/common/field/suggestions_field_select_connector.dart';
+import 'package:smart_typeahead/src/common/field/suggestions_field_tap_connector.dart';
 
 /// A widget that displays a list of suggestions above or below another widget.
 class SuggestionsField<T> extends StatefulWidget {
@@ -36,30 +36,30 @@ class SuggestionsField<T> extends StatefulWidget {
     this.animationDuration,
   });
 
-  /// {@macro flutter_typeahead.SuggestionsBox.controller}
+  /// {@macro smart_typeahead.SuggestionsBox.controller}
   final SuggestionsController<T>? controller;
 
-  /// {@template flutter_typeahead.SuggestionsField.focusNode}
+  /// {@template smart_typeahead.SuggestionsField.focusNode}
   /// The focus node of the child, usually an [EditableText] widget.
   ///
   /// This is used to show and hide the suggestions box.
   /// {@endtemplate}
   final FocusNode focusNode;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.builder}
+  /// {@macro smart_typeahead.SuggestionsBox.builder}
   final Widget Function(
     BuildContext context,
     SuggestionsController<T> controller,
   ) builder;
 
-  /// {@template flutter_typeahead.SuggestionsField.fieldBuilder}
+  /// {@template smart_typeahead.SuggestionsField.fieldBuilder}
   /// The child of the suggestions field.
   ///
   /// This is typically an [EditableText] widget.
   /// {@endtemplate}
   final Widget child;
 
-  /// {@template flutter_typeahead.SuggestionsField.onSelected}
+  /// {@template smart_typeahead.SuggestionsField.onSelected}
   /// Called when a suggestion is selected.
   ///
   /// If [hideOnSelect] is true, the suggestions box will be closed after this callback is called.
@@ -68,26 +68,26 @@ class SuggestionsField<T> extends StatefulWidget {
   /// {@endtemplate}
   final ValueSetter<T>? onSelected;
 
-  /// {@template flutter_typeahead.SuggestionsField.direction}
+  /// {@template smart_typeahead.SuggestionsField.direction}
   /// The direction in which the suggestions box opens.
   ///
   /// Defaults to [VerticalDirection.down].
   /// {@endtemplate}
   final VerticalDirection? direction;
 
-  /// {@template flutter_typeahead.SuggestionsField.constraints}
+  /// {@template smart_typeahead.SuggestionsField.constraints}
   /// The constraints to be applied to the suggestions box.
   /// {@endtemplate}
   final BoxConstraints? constraints;
 
-  /// {@template flutter_typeahead.SuggestionsField.constrainWidth}
+  /// {@template smart_typeahead.SuggestionsField.constrainWidth}
   /// Whether the suggestions box should be constrained to the width of the child.
   ///
   /// Defaults to true.
   /// {@endtemplate}
   final bool constrainWidth;
 
-  /// {@template flutter_typeahead.SuggestionsField.offset}
+  /// {@template smart_typeahead.SuggestionsField.offset}
   /// The offset of the suggestions box.
   /// The x value of this property will be applied symmetrically.
   /// The value is automatically flipped if the suggestions box is flipped.
@@ -96,7 +96,7 @@ class SuggestionsField<T> extends StatefulWidget {
   /// {@endtemplate}
   final Offset? offset;
 
-  /// {@template flutter_typeahead.SuggestionsField.autoFlipDirection}
+  /// {@template smart_typeahead.SuggestionsField.autoFlipDirection}
   /// Whether the suggestions box should automatically flip direction if there's not enough space
   /// in the desired direction, but there is enough space in the opposite direction.
   ///
@@ -108,14 +108,14 @@ class SuggestionsField<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool autoFlipDirection;
 
-  /// {@template flutter_typeahead.SuggestionsField.autoFlipMinHeight}
+  /// {@template smart_typeahead.SuggestionsField.autoFlipMinHeight}
   /// The minimum height the suggestions box can have before attempting to flip.
   ///
   /// Defaults to 64.
   /// {@endtemplate}
   final double autoFlipMinHeight;
 
-  /// {@template flutter_typeahead.SuggestionsField.showOnFocus}
+  /// {@template smart_typeahead.SuggestionsField.showOnFocus}
   /// Whether the suggestions box should be shown when the child of the suggestions box gains focus.
   ///
   /// If disabled, the suggestions box will remain closed when the user taps on the child of the suggestions box.
@@ -124,7 +124,7 @@ class SuggestionsField<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool showOnFocus;
 
-  /// {@template flutter_typeahead.SuggestionsField.hideOnUnfocus}
+  /// {@template smart_typeahead.SuggestionsField.hideOnUnfocus}
   /// Whether the suggestions box should be hidden when the child of the suggestions box loses focus.
   ///
   /// If disabled, the suggestions box will remain open when the user taps outside of the suggestions box.
@@ -133,7 +133,7 @@ class SuggestionsField<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool hideOnUnfocus;
 
-  /// {@template flutter_typeahead.SuggestionsField.hideOnSelect}
+  /// {@template smart_typeahead.SuggestionsField.hideOnSelect}
   /// Whether to keep the suggestions visible even after a suggestion has been selected.
   ///
   /// Note that if this is disabled, the only way
@@ -148,23 +148,23 @@ class SuggestionsField<T> extends StatefulWidget {
   /// {@endtemplate}
   final bool hideOnSelect;
 
-  /// {@template flutter_typeahead.SuggestionsField.hideWithKeyboard}
+  /// {@template smart_typeahead.SuggestionsField.hideWithKeyboard}
   /// Whether the suggestions box should be hidden when the keyboard is closed.
   ///
   /// Defaults to `true`.
   /// {@endtemplate}
   final bool hideWithKeyboard;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.scrollController}
+  /// {@macro smart_typeahead.SuggestionsBox.scrollController}
   final ScrollController? scrollController;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.decorationBuilder}
+  /// {@macro smart_typeahead.SuggestionsBox.decorationBuilder}
   final DecorationBuilder? decorationBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.transitionBuilder}
+  /// {@macro smart_typeahead.SuggestionsBox.transitionBuilder}
   final AnimationTransitionBuilder? transitionBuilder;
 
-  /// {@macro flutter_typeahead.SuggestionsBox.animationDuration}
+  /// {@macro smart_typeahead.SuggestionsBox.animationDuration}
   final Duration? animationDuration;
 
   @override
