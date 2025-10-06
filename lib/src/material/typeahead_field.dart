@@ -52,5 +52,6 @@ class TypeAheadField<T> extends RawTypeAheadField<T> {
           itemBuilder: TypeAheadMaterialDefaults.itemBuilder(itemBuilder),
           decorationBuilder:
               TypeAheadMaterialDefaults.wrapperBuilder(decorationBuilder),
+          constrainWidth: constraints != null ? false : true,
         );
 }
